@@ -18,7 +18,12 @@ namespace imported
     public class partTime : Employee
     {
         public float hourlyRate;
-    }
+
+		public new void PrintName()
+		{
+			Console.WriteLine($"  {FirstName} {LastName}Welcome!");
+		}
+	}
 
     public class fullTime : Employee 
     {
@@ -29,10 +34,8 @@ namespace imported
     {
         public static void Main()
         {
-            Start:
-            Console.WriteLine("Are you a full-time or Part-time Employee");
-            string answer = Console.ReadLine().ToLower();
-            if (answer == "full-time") {
+            //Start:
+            
                 fullTime FT = new fullTime();
                 Console.WriteLine("what is your first name");
                 FT.FirstName = Console.ReadLine();
@@ -43,27 +46,30 @@ namespace imported
                 FT.monthlySalary = float.Parse( sal );
                 FT.PrintName();
 
-            }
-            else if (answer == "part-time")
-            {
+				
                 partTime PT = new partTime();
                 Console.WriteLine("what is your first name");
                 PT.FirstName = Console.ReadLine();
                 Console.WriteLine("what is your last name");
                 PT.LastName = Console.ReadLine();
                 Console.WriteLine("How much is your Monthly salary");
-                var sal = Console.ReadLine();
-                PT.hourlyRate = float.Parse(sal);
+                var sal1 = Console.ReadLine();
+                PT.hourlyRate = float.Parse(sal1);
                 PT.PrintName();
 
-            }
-            else
-            {
-                Console.WriteLine("Invalid answer");
-                goto Start;
-            }
+				Employee[] e = new Employee[3];
 
+				e[0] = new Employee();
+				e[1] = PT;
+				e[2] = FT;
 
+				foreach (Employee e2 in e)
+				{
+					e2.PrintName();
+				}
+
+		
+                //goto Start;
 
         }
     }
