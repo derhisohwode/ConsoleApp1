@@ -63,7 +63,16 @@ namespace imported
                 goto Start;
             }
 
+            Employee[] e = new Employee[3];
 
+            e[0] = new Employee();
+            e[1] = new partTime();
+            e[2] = new fullTime();
+
+            foreach (Employee e2 in e)
+            {
+                e2.PrintName();
+            }
 
         }
     }
