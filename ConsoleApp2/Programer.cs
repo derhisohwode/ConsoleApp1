@@ -8,19 +8,19 @@ namespace imported
         public string LastName;
         public string Email;
 
-        public void PrintName()
+        public virtual void PrintName() //method
             {
                 Console.WriteLine($" Welcome! {FirstName} {LastName}");
             }
 
     }
 
-    public class partTime : Employee
+    public class partTime : Employee //inheritance
     {
         public float hourlyRate;
 
-		public new void PrintName()
-		{
+		public new void PrintName() //polymorphism(new method)
+        {
 			Console.WriteLine($"  {FirstName} {LastName}Welcome!");
 		}
 	}
@@ -28,15 +28,20 @@ namespace imported
     public class fullTime : Employee 
     {
         public float monthlySalary;
+
+        public override void PrintName() //polymorphism(override method)
+        {
+            Console.WriteLine($"  {FirstName} {LastName}you are Welcome!");
+        }
     }
 
     public class Programer
     {
         public static void Main()
         {
-            //Start:
-            
-                fullTime FT = new fullTime();
+            //Start: //label
+
+            fullTime FT = new fullTime();
                 Console.WriteLine("what is your first name");
                 FT.FirstName = Console.ReadLine();
                 Console.WriteLine("what is your last name");
@@ -57,29 +62,29 @@ namespace imported
                 PT.hourlyRate = float.Parse(sal1);
                 PT.PrintName();
 
-				Employee[] e = new Employee[3];
+				Employee[] e = new Employee[3]; //array
 
-				e[0] = new Employee();
+            e[0] = new Employee();
 				e[1] = PT;
 				e[2] = FT;
 
-				foreach (Employee e2 in e)
+				foreach (Employee e2 in e) //foreach loop
 				{
 					e2.PrintName();
 				}
 
 		
                 //goto Start;
-            Employee[] e = new Employee[3];
+            //Employee[] e = new Employee[3];
 
-            e[0] = new Employee();
-            e[1] = new partTime();
-            e[2] = new fullTime();
+            //e[0] = new Employee();
+            //e[1] = new partTime();
+            //e[2] = new fullTime();
 
-            foreach (Employee e2 in e)
-            {
-                e2.PrintName();
-            }
+            //foreach (Employee e2 in e)
+            //{
+            //    e2.PrintName();
+            //}
 
         }
     }

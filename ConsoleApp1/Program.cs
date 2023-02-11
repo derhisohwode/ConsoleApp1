@@ -3,6 +3,7 @@ using imported;
 using System.Runtime.InteropServices;
 using static Crag.Class1;
 using static Con.Class2;
+using static Class12;
 
 namespace clasp
 {
@@ -11,7 +12,8 @@ namespace clasp
         static float a = 3.12F;
         int _b ;
         int _c;
-        public practice(int c, int b) { 
+        public practice(int c, int b) //constructor
+        { 
             this._c = c;
             this._b = b;
         }
@@ -26,12 +28,13 @@ namespace clasp
     {
         public static void Main()
         {
+            Main9();
             Start:
             Programer.Main();
             Console.WriteLine("Enter a number from 0 - 100");
             string dra = Console.ReadLine();
             int drag = int.Parse(dra);
-            practice D1 = new practice(5, drag);
+            practice D1 = new practice(5, drag); //using the constructor
             float result = D1.Prite();
             Console.WriteLine($"result is {result}");
             if (result <= 5)
