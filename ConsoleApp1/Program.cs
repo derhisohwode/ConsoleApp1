@@ -1,9 +1,12 @@
-﻿using Crag;
-using imported;
+﻿using imported;
+using importee;
+using importees;
+using exported;
 using System.Runtime.InteropServices;
 using static Crag.Class1;
 using static Con.Class2;
 using static Class12;
+using static Cragy.Class16; 
 
 namespace clasp
 {
@@ -28,7 +31,11 @@ namespace clasp
     {
         public static void Main()
         {
+            Main16();
             Main9();
+            ProgramerProps.Main11();
+            Programer2.Main10();
+            Programerclone.Main15();
             Start:
             Programer.Main();
             Console.WriteLine("Enter a number from 0 - 100");
