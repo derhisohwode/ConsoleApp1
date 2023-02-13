@@ -3,6 +3,10 @@ using imported;
 using System.Runtime.InteropServices;
 using static Crag.Class1;
 using static Con.Class2;
+using static Conso.Class13;
+using static Consol.Class14;
+using static ClassInterface;
+using Consol;
 
 namespace clasp
 {
@@ -26,7 +30,8 @@ namespace clasp
     {
         public static void Main()
         {
-            Start:
+        Start:
+            Main8();
             Programer.Main();
             Console.WriteLine("Enter a number from 0 - 100");
             string dra = Console.ReadLine();
@@ -36,9 +41,11 @@ namespace clasp
             Console.WriteLine($"result is {result}");
             if (result <= 5)
             {
-                
+
                 Main2();
-            } else
+
+            }
+            else
             {
                 Main2();
             }
@@ -48,9 +55,11 @@ namespace clasp
             int drag1 = int.Parse(dra1);
             practice D2 = new practice(drag1, 10);
             float result1 = D2.Prite();
+            Main6();
+            Main7();
             Console.WriteLine($"result is {result1}");
             if (result1 <= 5)
-            { 
+            {
                 Main1();
             }
             else
