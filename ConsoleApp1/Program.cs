@@ -1,5 +1,7 @@
-﻿using Crag;
-using imported;
+﻿using imported;
+using importee;
+using importees;
+using exported;
 using System.Runtime.InteropServices;
 using static Crag.Class1;
 using static Con.Class2;
@@ -7,6 +9,9 @@ using static Conso.Class13;
 using static Consol.Class14;
 using static ClassInterface;
 using Consol;
+using static Class12;
+using static Cragy.Class16; 
+
 
 namespace clasp
 {
@@ -15,7 +20,8 @@ namespace clasp
         static float a = 3.12F;
         int _b ;
         int _c;
-        public practice(int c, int b) { 
+        public practice(int c, int b) //constructor
+        { 
             this._c = c;
             this._b = b;
         }
@@ -30,13 +36,20 @@ namespace clasp
     {
         public static void Main()
         {
+
         Start:
             Main8();
+            Main16();
+            Main9();
+            ProgramerProps.Main11();
+            Programer2.Main10();
+            Programerclone.Main15();
+            Start:
             Programer.Main();
             Console.WriteLine("Enter a number from 0 - 100");
             string dra = Console.ReadLine();
             int drag = int.Parse(dra);
-            practice D1 = new practice(5, drag);
+            practice D1 = new practice(5, drag); //using the constructor
             float result = D1.Prite();
             Console.WriteLine($"result is {result}");
             if (result <= 5)
