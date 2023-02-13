@@ -44,7 +44,6 @@ namespace clasp
             ProgramerProps.Main11();
             Programer2.Main10();
             Programerclone.Main15();
-            Start:
             Programer.Main();
             Console.WriteLine("Enter a number from 0 - 100");
             string dra = Console.ReadLine();
