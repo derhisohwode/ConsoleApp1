@@ -9,6 +9,8 @@ using static Conso.Class13;
 using static Consol.Class14;
 using static ClassInterface;
 using Consol;
+using static Class17;
+using static Class18;
 using static Class12;
 using static Cragy.Class16; 
 
@@ -41,6 +43,8 @@ namespace clasp
             Main8();
             Main16();
             Main9();
+            Main17();
+            Main18();
             ProgramerProps.Main11();
             Programer2.Main10();
             Programerclone.Main15();
