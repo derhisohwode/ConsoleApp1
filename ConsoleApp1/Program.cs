@@ -11,6 +11,7 @@ using static ClassInterface;
 using Consol;
 using static Class17;
 using static Class18;
+using static Class19;
 using static Class12;
 using static Cragy.Class16; 
 
@@ -45,6 +46,7 @@ namespace clasp
             Main9();
             Main17();
             Main18();
+            Main19();
             ProgramerProps.Main11();
             Programer2.Main10();
             Programerclone.Main15();

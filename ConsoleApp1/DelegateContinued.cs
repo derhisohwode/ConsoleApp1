@@ -6,6 +6,42 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 
 
+public delegate void SimpleDelegate(); 
+public class Class19
+{
+	public static void Main19()
+	{
+		SimpleDelegate del, del2, del3, del4;
+		del = new SimpleDelegate(SimpleMethod);
+		del2 = new SimpleDelegate(SimpleMethod2);
+		del3 = new SimpleDelegate(SimpleMethod3);
+		del();
+		del2();
+		del3();
+		del4 = del + del2 + del3;
+		del4();
+
+		///////////////////////////////OR//////////////////////////////////////
+		
+		//del += new SimpleDelegate(SimpleMethod);
+		//del += new SimpleDelegate(SimpleMethod2);
+		//del += new SimpleDelegate(SimpleMethod3);
+
+		//del();
+	}
+	public static void SimpleMethod()
+	{
+		Console.WriteLine("Simplemethod invoked");
+	}
+	public static void SimpleMethod2()
+	{
+		Console.WriteLine("Simplemethod2 invoked");
+	}
+	public static void SimpleMethod3()
+	{
+		Console.WriteLine("Simplemethod3 invoked");
+	}
+}
 
 
 public class Class17 {
