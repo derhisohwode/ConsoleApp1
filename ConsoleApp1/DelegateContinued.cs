@@ -7,19 +7,29 @@ using System.Xml.Linq;
 
 
 public delegate void SimpleDelegate(); 
+public delegate int SimpleDelegate1(); 
+public delegate void SimpleDelegate2(out int integer); 
 public class Class19
 {
 	public static void Main19()
 	{
 		SimpleDelegate del, del2, del3, del4;
+		SimpleDelegate1 del5;
+		SimpleDelegate2 del6;
 		del = new SimpleDelegate(SimpleMethod);
 		del2 = new SimpleDelegate(SimpleMethod2);
 		del3 = new SimpleDelegate(SimpleMethod3);
+		del5 = new SimpleDelegate1(SimpleMethod1);
+		del6 = new SimpleDelegate2(SimpleMethod6);
 		del();
 		del2();
 		del3();
 		del4 = del + del2 + del3;
 		del4();
+		int print = del5();
+		int num;
+		del6(out num);
+		Console.WriteLine("{0} & {1} ",print, num);
 
 		///////////////////////////////OR//////////////////////////////////////
 		
@@ -32,6 +42,14 @@ public class Class19
 	public static void SimpleMethod()
 	{
 		Console.WriteLine("Simplemethod invoked");
+	}
+	public static int SimpleMethod1()
+	{
+		return 1;
+	}
+	public static void SimpleMethod6(out int number)
+	{
+		number = 10;
 	}
 	public static void SimpleMethod2()
 	{
