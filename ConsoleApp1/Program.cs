@@ -13,7 +13,8 @@ using static Class17;
 using static Class18;
 using static Class19;
 using static Class12;
-using static Cragy.Class16; 
+using static Cragy.Class16;
+using static ExceptionHandlin;
 
 
 namespace clasp
@@ -41,6 +42,7 @@ namespace clasp
         {
 
         Start:
+            Main20();
             Main8();
             Main16();
             Main9();
@@ -52,7 +54,7 @@ namespace clasp
             Programerclone.Main15();
             Programer.Main();
             Console.WriteLine("Enter a number from 0 - 100");
-            string dra = Console.ReadLine();
+            string? dra = Console.ReadLine();
             int drag = int.Parse(dra);
             practice D1 = new practice(5, drag); //using the constructor
             float result = D1.Prite();
