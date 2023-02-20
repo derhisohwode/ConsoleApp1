@@ -17,17 +17,27 @@ public class ExceptionHandlin
         //catch (Exception ex)  
         catch (FileNotFoundException ex)
         {
+            //don't do this becaus hackers can use this information to cause harm to our systems
             //Console.WriteLine(ex.ToString());
             //Console.WriteLine();
             //Console.WriteLine();
             //Console.WriteLine(ex.Message);
             //Console.WriteLine();
             //Console.WriteLine(ex.StackTrace);
-            Console.WriteLine("Please check if the file {0} exists",ex.FileName);
+           
+            //Console.WriteLine("Please check if the file {0} exists",ex.FileName);//this is a specific exception class which inherits
+            //from exception it throw the file not found error
+
+            //instead
+            Console.WriteLine("There was an error pls try again later, thank you");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"{ex.Message}", ex);
+            //don't do this becaus hackers can use this information to cause harm to our systems
+            //Console.WriteLine($"{ex.Message}", ex);//this is used incase the error is not what you thought of the Exception Class
+            //contains all kind of error that might occur in the code
+            //instead
+            Console.WriteLine("There was an error pls try again later, thank you");
         }
         finally
         {
@@ -48,17 +58,25 @@ public class ExceptionHandlin
         //catch (Exception ex)  
         catch (FileNotFoundException ex)
         {
+            //don't do this becaus hackers can use this information to cause harm to our systems
             //Console.WriteLine(ex.ToString());
             //Console.WriteLine();
             //Console.WriteLine();
             //Console.WriteLine(ex.Message);
             //Console.WriteLine();
-            Console.WriteLine(ex.StackTrace);
-            Console.WriteLine("Please check if the file {0} exists", ex.FileName);
+            //Console.WriteLine(ex.StackTrace);
+            //Console.WriteLine("Please check if the file {0} exists", ex.FileName);
+            
+            //instead
+            Console.WriteLine("There was an error pls try again later, thank you");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"{ex.Message}", ex);
+            //don't do this becaus hackers can use this information to cause harm to our systems
+            //Console.WriteLine($"{ex.Message}", ex);
+
+            //instead
+            Console.WriteLine("There was an error pls try again later, thank you");
         }
         finally
         {
@@ -79,13 +97,17 @@ public class ExceptionHandlin
         //catch (Exception ex)  
         catch (FileNotFoundException ex)
         {
+            //don't do this becaus hackers can use this information to cause harm to our systems
             //Console.WriteLine(ex.ToString());
             //Console.WriteLine();
             //Console.WriteLine();
             //Console.WriteLine(ex.Message);
             //Console.WriteLine();
             //Console.WriteLine(ex.StackTrace);
-            Console.WriteLine("Please check if the file {0} exists", ex.FileName);
+            //Console.WriteLine("Please check if the file {0} exists", ex.FileName);
+
+            //instead
+            Console.WriteLine("There was an error pls try again later, thank you");
         }
         finally
         {
