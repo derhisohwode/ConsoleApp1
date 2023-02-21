@@ -36,11 +36,13 @@ public class ExceptionHandlingAbuse
 			Console.WriteLine(ev.Message);
 			Console.WriteLine("cannot input a number less than {0} or greater than {1}", Int32.MinValue, Int32.MaxValue);
 		}
+
 		catch (DivideByZeroException ez)
 		{
 			Console.WriteLine(ez.Message);
 			Console.WriteLine("your second number cannot be zero");
 		}
+
 		catch (Exception ee)
 		{
 			Console.WriteLine(ee.ToString());
