@@ -46,63 +46,63 @@ namespace clasp
 
         Start:
             Main23();
-            Main22();
-            Main21();
-            Main20();
-            Main8();
-            Main16();
-            Main9();
-            Main17();
-            Main18();
-            Main19();
-            ProgramerProps.Main11();
-            Programer2.Main10();
-            Programerclone.Main15();
-            Programer.Main();
-            Console.WriteLine("Enter a number from 0 - 100");
-            string? dra = Console.ReadLine();
-            int drag = int.Parse(dra);
-            practice D1 = new practice(5, drag); //using the constructor
-            float result = D1.Prite();
-            Console.WriteLine($"result is {result}");
-            if (result <= 5)
-            {
+        //    Main22();
+        //    Main21();
+        //    Main20();
+        //    Main8();
+        //    Main16();
+        //    Main9();
+        //    Main17();
+        //    Main18();
+        //    Main19();
+        //    ProgramerProps.Main11();
+        //    Programer2.Main10();
+        //    Programerclone.Main15();
+        //    Programer.Main();
+        //    Console.WriteLine("Enter a number from 0 - 100");
+        //    string? dra = Console.ReadLine();
+        //    int drag = int.Parse(dra);
+        //    practice D1 = new practice(5, drag); //using the constructor
+        //    float result = D1.Prite();
+        //    Console.WriteLine($"result is {result}");
+        //    if (result <= 5)
+        //    {
 
-                Main2();
+        //        Main2();
 
-            }
-            else
-            {
-                Main2();
-            }
+        //    }
+        //    else
+        //    {
+        //        Main2();
+        //    }
 
-            Console.WriteLine("Enter a number from 0 - 100");
-            string dra1 = Console.ReadLine();
-            int drag1 = int.Parse(dra1);
-            practice D2 = new practice(drag1, 10);
-            float result1 = D2.Prite();
-            Main6();
-            Main7();
-            Console.WriteLine($"result is {result1}");
-            if (result1 <= 5)
-            {
-                Main1();
-            }
-            else
-            {
-                Main2();
-            }
+        //    Console.WriteLine("Enter a number from 0 - 100");
+        //    string dra1 = Console.ReadLine();
+        //    int drag1 = int.Parse(dra1);
+        //    practice D2 = new practice(drag1, 10);
+        //    float result1 = D2.Prite();
+        //    Main6();
+        //    Main7();
+        //    Console.WriteLine($"result is {result1}");
+        //    if (result1 <= 5)
+        //    {
+        //        Main1();
+        //    }
+        //    else
+        //    {
+        //        Main2();
+        //    }
 
-            Console.WriteLine("wanna go again: yes or no");
-            string ans = Console.ReadLine().ToUpper();
-            if (ans == "YES")
-            {
-                goto Start;
-            }
-            else
-            {
-                Console.WriteLine("Thank you");
-            }
+        //    Console.WriteLine("wanna go again: yes or no");
+        //    string ans = Console.ReadLine().ToUpper();
+        //    if (ans == "YES")
+        //    {
+        //        goto Start;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Thank you");
+        //    }
 
         }
     }

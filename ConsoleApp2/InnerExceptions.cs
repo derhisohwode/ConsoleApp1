@@ -50,7 +50,7 @@ public class InnerExceptions
         } catch (Exception except)
         {
             Console.WriteLine("this is the current exception = {0}", except.GetType().Name);
-            string filestorer = @"C:\samlefiles\storeBackup1.txt";
+            string filestorer = @"C:\samlefiles\storeBackup2.txt";
             StreamWriter storer;
             storer = new StreamWriter(filestorer);
             storer.WriteLine(except.GetType().Name);

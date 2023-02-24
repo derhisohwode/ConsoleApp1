@@ -29,10 +29,14 @@ public class ExceptionHandlingAbuse
 		}
 		catch (OverflowException ev)
 		{
-			//string filestorer = @"C:\samlefiles\storeBackup1.txt";
-			//StreamWriter streamWriter = new StreamWriter(filestorer);
-			//streamWriter.WriteLine(ev.ToString());
-			//Console.WriteLine("check log for error info");
+			string filestorere = @"C:\samlefiles\storeBackup1.txt";
+			StreamWriter streamWriter = new StreamWriter(filestorere);
+			streamWriter.Write(ev.Message);
+			streamWriter.Write(ev.StackTrace);
+			streamWriter.Write(ev.ToString());
+			streamWriter.Write(ev.GetType().Name);
+			streamWriter.Close();
+			Console.WriteLine("check log for error info");
 			Console.WriteLine(ev.Message);
 			Console.WriteLine("cannot input a number less than {0} or greater than {1}", Int32.MinValue, Int32.MaxValue);
 		}
